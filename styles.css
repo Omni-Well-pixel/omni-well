@@ -18,3 +18,21 @@ a.card:hover{background:#222}.card p{color:var(--m);font-size:.9rem}.card .pr{co
 .note{border-left:2px solid var(--g);background:rgba(201,168,76,.06);padding:1rem 1.2rem;color:var(--m);font-size:.9rem;margin-top:1.4rem}
 blockquote{background:var(--p);border-left:2px solid var(--g);padding:1.2rem;font-style:italic;color:rgba(240,236,227,.8);font-size:.92rem}blockquote cite{display:block;margin-top:.6rem;font-style:normal;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--g)}
 footer{border-top:1px solid rgba(201,168,76,.15);padding:2rem 1.2rem;text-align:center;color:var(--m);font-size:.8rem}footer img{height:56px;margin-bottom:.6rem}footer a{color:var(--m)}
+/* Keep navigation, grids and media within the phone viewport. */
+@media (max-width: 600px) {
+  header { position: static; padding: .65rem 1rem; }
+  .bar { gap: .4rem; }
+  .bar img { height: 36px; }
+  nav { width: 100%; gap: 0 .85rem; }
+  nav a { display: flex; align-items: center; min-height: 44px; font-size: .72rem; letter-spacing: .06em; }
+  main { padding-inline: 1rem; }
+  section { padding-block: 2rem; }
+  .hero { padding: 2.25rem 0 1.5rem; }
+  h1 { font-size: clamp(2.25rem, 10vw, 3.5rem); overflow-wrap: anywhere; }
+  .grid, .split { grid-template-columns: minmax(0, 1fr); }
+  .split { gap: 1.25rem; }
+  .split img { height: auto; }
+  .card { padding: 1.15rem; }
+  .btn { min-height: 44px; max-width: 100%; padding: .7rem 1rem; }
+  .note { padding: .85rem 1rem; }
+}
